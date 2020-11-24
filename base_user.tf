@@ -29,13 +29,13 @@ resource "aws_iam_user_policy_attachment" "attach_base_user_policy" {
   policy_arn = aws_iam_policy.base_user_policy.arn
 }
 
-resource "aws_iam_access_key" "base_user_access_key"{
-    user = aws_iam_user.base_user.name
+resource "aws_iam_access_key" "base_user_access_key" {
+  user = aws_iam_user.base_user.name
 }
 
 output "access_key" {
-    value = aws_iam_access_key.base_user_access_key.id
+  value = aws_iam_access_key.base_user_access_key.id
 }
 output "secret" {
-    value = aws_iam_access_key.base_user_access_key.secret
+  value = aws_iam_access_key.base_user_access_key.secret
 }
