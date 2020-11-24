@@ -23,7 +23,6 @@ data "aws_iam_policy_document" "demo_assumed_permissions_policy" {
     resources = [
       "*"
     ]
-
   }
 }
 
